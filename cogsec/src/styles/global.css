@@ -1,0 +1,108 @@
+/* =============================================
+   COGSEC — global.css
+   Terminal-editorial dark theme
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:           #080c0a;
+  --bg-surface:   #0e1410;
+  --bg-elevated:  #141a15;
+  --border:       #1e2b20;
+  --border-bright:#2e4a32;
+
+  --text:         #d4e8d6;
+  --text-muted:   #6b8c6e;
+  --text-faint:   #344836;
+
+  --accent:       #00ff9d;
+  --accent-dim:   #00c97a;
+  --accent-glow:  rgba(0, 255, 157, 0.08);
+  --accent-glow-strong: rgba(0, 255, 157, 0.15);
+
+  --red:          #ff4757;
+  --amber:        #ffa502;
+
+  --font-mono:  'Syne Mono', 'Courier New', monospace;
+  --font-sans:  'Syne', system-ui, sans-serif;
+
+  --max-width:  760px;
+  --gutter:     clamp(1.25rem, 5vw, 2.5rem);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.7;
+  min-height: 100vh;
+  /* subtle scanline texture */
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 157, 0.015) 2px,
+    rgba(0, 255, 157, 0.015) 4px
+  );
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+
+/* ── Selection ── */
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ── Typography ── */
+h1, h2, h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+a:hover { opacity: 0.8; }
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+/* ── Fade-up animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes scanIn {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
