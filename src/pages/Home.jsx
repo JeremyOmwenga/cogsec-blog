@@ -62,7 +62,7 @@ export default function Home() {
             marginBottom: '1.5rem',
             animation: 'fadeUp 0.4s ease both',
           }}>
-            <span style={{ color: 'var(--accent)' }}>$</span> INITIALISING COGSEC TERMINAL...
+            
           </div>
 
           <h1 style={{
@@ -104,7 +104,7 @@ export default function Home() {
             animation: 'fadeUp 0.5s 0.3s ease both',
           }}>
             {[
-              { label: 'THREAT ENV', value: 'ELEVATED', color: 'var(--amber)' },
+             
               { label: 'FOCUS',      value: 'COGSEC + INFOSEC', color: 'var(--accent)' },
               { label: 'EST',        value: '2026', color: 'var(--text-faint)' },
             ].map(({ label, value, color }) => (
@@ -130,7 +130,7 @@ export default function Home() {
             marginBottom: '0.5rem',
             animation: 'fadeUp 0.4s 0.35s ease both',
           }}>
-            // TRANSMISSION LOG — {ARTICLES.length} ENTR{ARTICLES.length === 1 ? 'Y' : 'IES'}
+            // LOG — {ARTICLES.length} ENTR{ARTICLES.length === 1 ? 'Y' : 'IES'}
           </div>
 
           {ARTICLES.map((article, i) => (
