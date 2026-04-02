@@ -90,19 +90,7 @@ export default function Header() {
         </Link>
 
         <nav style={styles.nav}>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--text-faint)', letterSpacing: '0.08em' }}>
-            <span style={styles.statusDot} />
-            LIVE
-          </span>
-          <Link
-            to="/"
-            style={{
-              ...styles.navLink,
-              ...(isHome ? styles.navLinkActive : {}),
-            }}
-          >
-            Index
-          </Link>
+         
           <Link
             to="/about"
             style={styles.navLink}
