@@ -35,10 +35,10 @@ export default function Footer() {
     <footer style={styles.footer}>
       <div style={styles.inner}>
         <span style={styles.left}>
-          <span style={styles.accent}>COGSEC</span> © {new Date().getFullYear()} — all opinions are threat assessments
+          <span style={styles.accent}>COGSEC</span> © {new Date().getFullYear()} 
         </span>
         <span style={styles.right}>
-          EST. 2026 // KNOWLEDGE IS DEFENCE
+           // KNOWLEDGE IS DEFENCE
         </span>
       </div>
     </footer>
