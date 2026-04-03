@@ -326,7 +326,7 @@ export default function About() {
           <span style={styles.contactText}>
             QUESTIONS, TIPS, DISAGREEMENTS —
           </span>
-          <a href="mailto:your@email.com" style={styles.contactLink}>
+          <a href="mailto:jeremyangwenyi.ja@gmail.com" style={styles.contactLink}>
             OPEN A CHANNEL →
           </a>
         </div>
