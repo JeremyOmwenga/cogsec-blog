@@ -10,6 +10,11 @@ import IntroCogsec, { frontmatter as fm0 } from './articles/intro-to-cogsec.mdx'
 
 // Build the articles registry — newest first
 export const ARTICLES = [
+   {
+    slug:        'privacy-is-a-myth',
+    frontmatter: fm1,
+    Component:   PrivacyMyth,
+  },
   {
     slug:      'intro-to-cogsec',
     frontmatter: fm0,
