@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Article from './pages/Article.jsx'
+import About from './pages/About.jsx'
 
 // ── Import every MDX article here ──────────────────────────────
 // Each MDX file exports its content as default and frontmatter as a named export.
