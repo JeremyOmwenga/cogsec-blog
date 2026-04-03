@@ -78,7 +78,7 @@ const styles = {
 export default function Header() {
   const location = useLocation()
   const isHome = location.pathname === '/'
-  const isHome = location.pathname === '/about'
+  const isAbout = location.pathname === '/about'
   
   return (
     <header style={styles.header}>
