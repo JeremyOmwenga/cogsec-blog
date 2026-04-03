@@ -8,6 +8,8 @@ import Article from './pages/Article.jsx'
 
 import IntroCogsec, { frontmatter as fm0 } from './articles/intro-to-cogsec.mdx'
 
+import PrivacyMyth, { frontmatter as fm1 } from './articles/privacy-is-a-myth.mdx'
+
 // Build the articles registry — newest first
 export const ARTICLES = [
    {
