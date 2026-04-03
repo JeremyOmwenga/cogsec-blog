@@ -91,9 +91,12 @@ export default function Header() {
 
         <nav style={styles.nav}>
          
-          <Link
+                    <Link
             to="/about"
-            style={styles.navLink}
+            style={{
+              ...styles.navLink,
+              ...(isAbout ? styles.navLinkActive : {}),
+            }}
           >
             About
           </Link>
