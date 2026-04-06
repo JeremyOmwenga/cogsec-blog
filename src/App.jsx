@@ -11,6 +11,8 @@ import IntroCogsec, { frontmatter as fm0 } from './articles/intro-to-cogsec.mdx'
 
 import PrivacyMyth, { frontmatter as fm1 } from './articles/privacy-is-a-myth.mdx'
 
+import AiCybersec, { frontmatter as fm2 } from './articles/ai-in-cybersec.mdx'
+
 // Build the articles registry — newest first
 export const ARTICLES = [
    {
