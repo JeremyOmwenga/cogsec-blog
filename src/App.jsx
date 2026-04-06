@@ -14,6 +14,11 @@ import PrivacyMyth, { frontmatter as fm1 } from './articles/privacy-is-a-myth.md
 // Build the articles registry — newest first
 export const ARTICLES = [
    {
+  slug:        'ai-in-cybersec',
+  frontmatter: fm2,
+  Component:   AiCybersec,
+   },
+   {
     slug:        'privacy-is-a-myth',
     frontmatter: fm1,
     Component:   PrivacyMyth,
