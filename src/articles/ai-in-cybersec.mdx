@@ -1,0 +1,66 @@
+---
+title: "The Model Knows Where You Left the Door Open"
+tag: "Infosec"
+date: "Apr 6, 2026"
+author: "COGSEC"
+readTime: "4 MIN READ"
+excerpt: "AI is finding vulnerabilities faster than humans can patch them. It is also writing the vulnerable code in the first place. Both sides of that equation deserve serious attention."
+---
+
+There is a peculiar irony running through the current moment in cybersecurity.
+
+The same AI systems being deployed to detect and neutralise threats are simultaneously producing the code that creates them. The attack and the vulnerability share a common origin. Understanding both requires looking at how AI interacts with two specific surfaces: the package ecosystem that underlies almost all modern software, and the boilerplate that developers are increasingly copying from AI assistants without reading.
+
+## Hunting Bugs at Machine Speed
+
+Vulnerability research has historically been constrained by human bandwidth. Finding a buffer overflow, a logic flaw, or a dependency chain with a known weak link requires reading code, building mental models, and testing hypotheses. A skilled researcher might audit a few thousand lines a day under good conditions.
+
+AI changes this arithmetic completely.
+
+Large language models trained on code can scan repositories, flag suspicious patterns, and cross-reference known vulnerability signatures across millions of lines in minutes. Google's Project Zero has demonstrated AI-assisted discovery of memory safety vulnerabilities in codebases that had been reviewed by human engineers for years. The flaws were there. The humans missed them. The model did not.
+
+Package management is a particularly rich attack surface for this kind of automated analysis.
+
+Modern software is almost never written from scratch. A typical Node.js application pulls in hundreds of transitive dependencies, many of them maintained by a single developer, some of them abandoned. The `npm` registry alone hosts over two million packages. Each one is a potential entry point.
+
+AI systems can map dependency trees, identify packages with unusual update patterns, flag maintainers whose accounts show signs of compromise, and cross-reference version histories against public vulnerability databases faster than any human team. This is genuinely useful. It is also a capability that cuts both ways.
+
+> The same model that finds the vulnerable dependency for the defender can find it for the attacker. The difference is who runs the query first.
+
+Offensive AI tools are already being used to identify supply chain targets at scale. Typosquatting attacks, where a malicious package is named to resemble a popular legitimate one, have become more sophisticated precisely because AI can generate convincing package names, plausible documentation, and realistic version histories that pass casual inspection.
+
+## The Boilerplate Problem
+
+Flip the camera.
+
+The other side of the AI-in-cybersecurity story is not about AI finding vulnerabilities. It is about AI creating them, quietly, at scale, inside the code that developers trust because a capable-sounding model produced it.
+
+The problem is structural. AI code assistants are trained to produce code that works, in the sense that it runs and produces the expected output. They are not trained to produce code that is secure, in the sense that it handles adversarial inputs gracefully, leaks no unintended information, and makes correct assumptions about trust boundaries.
+
+The gap between those two definitions is where user data goes to die.
+
+Concrete examples are not hard to find. AI-generated authentication flows that store passwords in plaintext. API boilerplate that logs full request bodies, including credentials, to stdout. Database query builders that construct SQL by string concatenation rather than parameterised queries, reintroducing injection vulnerabilities that the industry spent a decade eliminating. Session management code that generates predictable tokens.
+
+None of these are exotic failure modes. They are well-understood, well-documented antipatterns that appear in security training on day one. A developer who has read the OWASP Top 10 will not write them. An AI assistant that has ingested the entire public internet will sometimes produce them anyway, because it is pattern-matching on what code tends to look like rather than reasoning about what code should guarantee.
+
+## The Trust Gradient
+
+The deeper issue is psychological as much as technical.
+
+Code written by a human colleague gets reviewed. Code written by an AI assistant often does not, because there is an implicit assumption that the model checked its own work. This assumption is unfounded. Models have no concept of checking. They produce the most statistically likely continuation of the prompt. That continuation may be correct, may be subtly wrong, or may be actively dangerous. The model cannot tell you which.
+
+Developers who would never merge unreviewed code from a junior engineer are copying AI-generated authentication logic into production repositories and committing it directly to main.
+
+This is the actual threat surface. Not a model that turns malicious. A model that produces plausible, functional, dangerously incomplete code, and a developer culture that has not yet developed the instincts to treat AI output with the same scepticism as any other untrusted input.
+
+## What Sound Practice Looks Like
+
+The response is not to stop using AI coding tools. That ship has sailed and the tools are genuinely useful.
+
+The response is to treat AI-generated code as you would treat code from a contractor you have never worked with before. Read it. Question the assumptions. Ask what happens when the input is malformed, the user is malicious, or the dependency is compromised.
+
+For package management specifically: pin your dependencies to exact versions and audit them. Use lockfiles. Run automated dependency scanning on every pull request. Treat a new dependency as a trust decision, not a convenience.
+
+For AI boilerplate: any code that touches authentication, authorisation, session management, cryptography, or data persistence should be reviewed against established security standards before it goes anywhere near a user. The model produced a starting point. You are responsible for where it ends up.
+
+The tools are powerful. The responsibility is still yours.
