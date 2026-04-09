@@ -13,7 +13,7 @@ import PrivacyMyth, { frontmatter as fm1 } from './articles/privacy-is-a-myth.md
 
 import AiCybersec, { frontmatter as fm2 } from './articles/ai-in-cybersec.mdx'
 
-import GlasswingMythos, { frontmatter as fm3 } from './articles/ai-in-cybersec.mdx'
+import GlasswingMythos, { frontmatter as fm3 } from './articles/glasswing-mythos.mdx'
 
 // Build the articles registry — newest first
 export const ARTICLES = [
