@@ -19,7 +19,7 @@ import AiCybersec, { frontmatter as fm3 } from './articles/ai-in-cybersec.mdx'
 export const ARTICLES = [
     {
   slug:        'glasswing-mythos',
-  frontmatter: fm2,
+  frontmatter: fm3,
   Component:   AiCybersec,
    },
    {
