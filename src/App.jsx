@@ -13,8 +13,15 @@ import PrivacyMyth, { frontmatter as fm1 } from './articles/privacy-is-a-myth.md
 
 import AiCybersec, { frontmatter as fm2 } from './articles/ai-in-cybersec.mdx'
 
+import AiCybersec, { frontmatter as fm3 } from './articles/ai-in-cybersec.mdx'
+
 // Build the articles registry — newest first
 export const ARTICLES = [
+    {
+  slug:        'ai-in-cybersec',
+  frontmatter: fm2,
+  Component:   AiCybersec,
+   },
    {
   slug:        'ai-in-cybersec',
   frontmatter: fm2,
