@@ -20,7 +20,7 @@ export const ARTICLES = [
     {
   slug:        'glasswing-mythos',
   frontmatter: fm3,
-  Component:   AiCybersec,
+  Component:   GlasswingMythos,
    },
    {
   slug:        'ai-in-cybersec',
