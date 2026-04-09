@@ -18,7 +18,7 @@ import AiCybersec, { frontmatter as fm3 } from './articles/ai-in-cybersec.mdx'
 // Build the articles registry — newest first
 export const ARTICLES = [
     {
-  slug:        'ai-in-cybersec',
+  slug:        'glasswing-mythos',
   frontmatter: fm2,
   Component:   AiCybersec,
    },
