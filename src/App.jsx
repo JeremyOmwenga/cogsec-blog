@@ -15,8 +15,16 @@ import AiCybersec, { frontmatter as fm2 } from './articles/ai-in-cybersec.mdx'
 
 import GlasswingMythos, { frontmatter as fm3 } from './articles/glasswing-mythos.mdx'
 
+import MetaAttentionArch, { frontmatter as fm4 } from './articles/meta-attention-architecture.mdx'
+
+
 // Build the articles registry — newest first
 export const ARTICLES = [
+    {
+  slug:        'meta-attention-architecture',
+  frontmatter: fm4,
+  Component:   MetaAttentionArch,
+   },
     {
   slug:        'glasswing-mythos',
   frontmatter: fm3,
