@@ -20,6 +20,11 @@ import MetaAttentionArch, { frontmatter as fm4 } from './articles/meta-attention
 
 // Build the articles registry — newest first
 export const ARTICLES = [
+     {
+  slug:        'synthetic-reality-epistemic collapse',
+  frontmatter: fm4,
+  Component:   MetaAttentionArch,
+   },
     {
   slug:        'meta-attention-architecture',
   frontmatter: fm4,
