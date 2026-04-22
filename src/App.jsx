@@ -22,7 +22,7 @@ import MetaAttentionArch, { frontmatter as fm4 } from './articles/meta-attention
 export const ARTICLES = [
      {
   slug:        'synthetic-reality-epistemic collapse',
-  frontmatter: fm4,
+  frontmatter: fm5,
   Component:   MetaAttentionArch,
    },
     {
