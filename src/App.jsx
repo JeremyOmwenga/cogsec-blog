@@ -17,6 +17,8 @@ import GlasswingMythos, { frontmatter as fm3 } from './articles/glasswing-mythos
 
 import MetaAttentionArch, { frontmatter as fm4 } from './articles/meta-attention-architecture.mdx'
 
+import SyntheticReality, { frontmatter as fm4 } from './articles/meta-attention-architecture.mdx'
+
 
 // Build the articles registry — newest first
 export const ARTICLES = [
